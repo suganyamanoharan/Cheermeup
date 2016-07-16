@@ -48,7 +48,6 @@ def index():
     print("List" + str(imlist))
     return render_template('index.html',image_list=imlist)
 
-
 def getTags():
     tags = g.db.execute("SELECT tagname,feedback FROM tags").fetchall()
     dict = {}
@@ -66,25 +65,22 @@ def handleLikesAndDislikes():
         pass #increment count
     return json.dumps({'status':'OK'})
 
-@app.route('/home/<name>')
-def home(name="Default"):
-    return render_template('abcd.html', name=name)
-
 @app.route('/wmyh', methods=['GET', 'POST'])        # what makes you happy?
 def wmyh():
     if request.method == 'POST':
         if 'done' in request.form.keys():
-            print selected
-            return redirect(url_for('index'))           # potentially a different url
+            # add everything selected to the db
+            return redirect(url_for('hello'))
         elif 'search' in request.form.keys():
             new_topic = request.form.get('search')
             topics.add(new_topic)
-            selected.add(new_topic)         # put in the DB
+            selected.add(new_topic)
         else:
             for item in request.form.keys():
                 if item not in selected:
-                    selected.add(item)      # put in the DB
+                    selected.add(item)
                 else:
                     selected.remove(item)
 
-    return render_template('wmyh.html', topics=topics, selected=selected)
+    nothingSelected = len(selected) == 0
+    return render_template('wmyh.html', topics=topics, selected=selected, nothingSelected =nothingSelected)
