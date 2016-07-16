@@ -7,7 +7,6 @@ from flask import g
 import sqlite3
 from sets import Set
 import json
-<<<<<<< HEAD
 from werkzeug.utils import secure_filename
 import personalImages
 
@@ -19,9 +18,6 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(APP_ROOT, 'static/images/personal')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-=======
-import personalImages
->>>>>>> f9c770e2c6c928ac8df1107d8e13d8f12f7c5de7
 
 """app = create_app(__name__)"""
 app.debug = True
@@ -86,10 +82,6 @@ def index():
     imlist=imageGenerator.weighted_choice(getTags())
     print("List" + str(imlist))
     return render_template('index.html',image_list=imlist, plist = plist)
-<<<<<<< HEAD
-
-=======
->>>>>>> f9c770e2c6c928ac8df1107d8e13d8f12f7c5de7
 
 def getTags():
     tags = g.db.execute("SELECT tagname,feedback FROM tags").fetchall()
