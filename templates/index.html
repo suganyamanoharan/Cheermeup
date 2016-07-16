@@ -14,11 +14,11 @@
     <button type="button" id="interests-btn" class="category-btn flat-btn">Interests</button>
   </div>
   <div class="image-container">
-    <div class="slide-img"><img src="{{url_for('static', filename='cat.jpeg')}}"/></div>
-    <div class="slide-img"><img src="{{url_for('static', filename='dog.jpg')}}"/></div>
-    <div class="slide-img"><img src="{{url_for('static', filename='dog2.jpg')}}"/></div>
-    <div class="slide-img"><img src="{{url_for('static', filename='bunny.jpg')}}"/></div>
-  </div>
+ {% for item in image_list %}
+	<div class="slide-img"><img src="{{url_for('static', filename=item)}}"/></div> 
+
+   {% endfor %}  
+</div>
 
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
