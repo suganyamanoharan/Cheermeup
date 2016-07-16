@@ -6,6 +6,7 @@ from flask import g
 import sqlite3
 from sets import Set
 import json
+import personalImages
 
 app= Flask(__name__)
 """app = create_app(__name__)"""
@@ -66,9 +67,10 @@ def hello():
 
 @app.route('/')
 def index():
+    plist = personalImages.pullPersonalPictures()
     imlist=imageGenerator.weighted_choice(getTags())
     print("List" + str(imlist))
-    return render_template('index.html',image_list=imlist)
+    return render_template('index.html',image_list=imlist, plist = plist)
 
 def getTags():
     tags = g.db.execute("SELECT tagname,feedback FROM tags").fetchall()

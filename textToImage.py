@@ -19,4 +19,4 @@ def textToImage(astr):
 
     name = random.randint(1,1000000)
     im.save('static/Images/personal/' + str(name)+'.png')
-textToImage("Think of all the times you put a laxative in you siblings food and smile.")
+textToImage("I'm so thankful for this internship!")
