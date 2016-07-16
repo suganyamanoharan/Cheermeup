@@ -15,7 +15,7 @@ def weighted_choice(dict):
     everything = []
     for el in weighted_tags:
         paths = os.listdir(os.path.dirname(os.path.abspath(__file__))+"/static/Images/"+ el)
-        full_paths = [os.path.dirname(os.path.abspath(__file__))+"static/Images/"+ el +"/"+ path for path in paths]
+        full_paths = [os.path.dirname(os.path.abspath(__file__))+"/static/Images/"+ el +"/"+ path for path in paths]
         everything += full_paths
 
-    return [random.choice(everything) for _ in xrange(10)]
+    return [random.choice(everything) for _ in xrange(15)]
