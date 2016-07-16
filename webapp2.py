@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 @app.route('/imgs')
-def generatePaths(imlist=imageGenerator.weighted_choice(selected_tags)):
+def generatePaths(imlist=imageGenerator.weighted_choice({"dogs":10,"cats":10})):
     return render_template('images.html', image_list= imlist)
 
 topics = ["food", "landscapes", "tv series", "cats", "dogs", "pokemon", "travel", "technology", "sports",
@@ -20,6 +20,11 @@ selected = []
 @app.route('/hello', methods=['GET'])
 def hello():
     return render_template('hello.html')
+
+@app.route('/')
+def index(imlist=imageGenerator.weighted_choice({"dogs":10,"cats":10})):
+    print("List" + str(imlist))
+    return render_template('index.html',image_list=imlist)
 
 @app.route('/home/<name>')
 def home(name="Default"):
