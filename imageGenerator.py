@@ -1,6 +1,6 @@
 import os
 import random
-import numpy
+import numpy.random
 
 def weighted_choice(dict):
 
@@ -14,9 +14,7 @@ def weighted_choice(dict):
     weighted_tags = numpy.random.choice(tags,15,probs)
     everything = []
     for el in weighted_tags:
-
         paths = os.listdir(os.path.dirname(os.path.abspath(__file__))+"/static/Images/"+ el)
         full_paths = ["images/"+ el +"/"+ path for path in paths]
         everything += full_paths
-
-    return [random.choice(everything) for _ in xrange(10)]
+    return [random.choice(everything) for _ in xrange(15)]
