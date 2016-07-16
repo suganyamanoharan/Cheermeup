@@ -9,7 +9,7 @@
   </head>
   <body>
 
-  <div id="button-container">
+  <div class="button-container">
     <button type="button" id="personal-btn" class="category-btn flat-btn">Personal</button>
     <button type="button" id="interests-btn" class="category-btn flat-btn">Interests</button>
   </div>
@@ -20,6 +20,12 @@
    {% endfor %}  
 </div>
 
+  <div id="like-btns-container" class="button-container">
+    <form action="action_page.php">
+      <input type="submit" value="Submit" id="like-btn">
+    </form>
+    <img class="float-right" src="{{url_for('static', filename='like-icon.png')}}"/>
+  </div>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
