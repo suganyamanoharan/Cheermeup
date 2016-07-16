@@ -1,13 +1,23 @@
 from flask import render_template, request, jsonify
 import logging,os
 import imageGenerator
+import textToImage
 from flask import Flask, redirect, url_for
 from flask import g
 import sqlite3
 from sets import Set
 import json
+from werkzeug.utils import secure_filename
 
-app= Flask(__name__)
+ALLOWED_EXTENSIONS = set([ 'jpg', 'jpeg', 'gif'])
+
+app = Flask(__name__)
+
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(APP_ROOT, 'static/images/personal')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
 """app = create_app(__name__)"""
 app.debug = True
 logger = logging.getLogger(__name__)
@@ -117,3 +127,33 @@ def condition():
 @app.route('/helloworld')
 def thanks():
     return render_template('thankyou.html')
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+@app.route('/uploadimages', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('upload_file',
+                                    filename=filename))
+    return render_template('upload.html')
+
+
+def uploadImage(textString):
+	print ( "Text to image done for " + textString)
+	textToImage.textToImage(textString)

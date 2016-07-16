@@ -34,6 +34,7 @@ def upload_file():
                                     filename=filename))
     return render_template('upload.html')
 
-
+def imageUpload(textstring):
+	
 
 
