@@ -5,6 +5,7 @@ from flask import Flask, redirect, url_for
 from flask import g
 import sqlite3
 from sets import Set
+import json
 
 app= Flask(__name__)
 """app = create_app(__name__)"""
@@ -55,6 +56,15 @@ def getTags():
         dict[str(element[0])] = element[1]
     return dict
 
+@app.route('/likes-handler', methods=['POST'])
+def handleLikesAndDislikes():
+    tag = request.json['tag']
+    value = request.json['value']
+    if value == 'dislike':
+        pass #-1
+    elif value == 'dislike':
+        pass #increment count
+    return json.dumps({'status':'OK'})
 
 @app.route('/home/<name>')
 def home(name="Default"):

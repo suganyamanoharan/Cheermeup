@@ -33,6 +33,44 @@ $(document).ready(function(){
             window.location.href = "../hello";
         }
     });
+
+    $('#dislike-btn').click(function() {
+        var imgUrl = $('.slick-current img').prop('src');
+        var tag = imgUrl.split("/")[5];
+        var data = {value:"dislike", tag:tag};
+        console.log(tag);
+    
+        $.ajax("/likes-handler", {
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            data: JSON.stringify(data),
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        })
+    });
+
+    $('#like-btn').click(function() {
+        var imgUrl = $('.slick-current img').prop('src');
+        var tag = imgUrl.split("/")[5];
+        console.log(tag);
+        var data = {value:"like", tag:tag};
+        
+        $.ajax("/likes-handler", {
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            data: JSON.stringify(data),
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        })
+    });
     
 });
 
