@@ -71,6 +71,14 @@ $(document).ready(function(){
             }
         })
     });
+
+    $('#personal-btn').click(function() {
+        window.location.href = "/personal";
+    });
+
+    $('#interests-btn').click(function() {
+        window.location.href = "/interests";
+    });
     
 });
 
