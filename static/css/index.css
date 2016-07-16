@@ -33,7 +33,7 @@
 	left: 2px; 
 }
 
-  .slick-next { 
+.slick-next { 
   right: 20px;
 }
 
@@ -41,7 +41,7 @@
     color: yellow;
 }
 
-#button-container {
+.button-container {
 	width: 50%;
     margin: 0 auto;
 }
@@ -81,7 +81,9 @@
   /*background-color: #e67e22;*/
   /*text-shadow: -1px 1px #193047;*/
 }
-
+.float-right {
+  float: right;
+}
 /*.sun-flower-button {
   position: relative;
   vertical-align: top;
