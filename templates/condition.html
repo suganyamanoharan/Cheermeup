@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>happy/unhappy</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='common.css')}}"/>
+</head>
+<body>
+    <div id="common">
+    <div id="text" >
+        Are you happy yet?<br><br>
+    </div>
+    <div id="bottom">
+        <div class="topic_checkbox">
+            <button class = "active-btn" type="button" onclick="location.href='/'">NO</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class = "active-btn" type="button" onclick="myFunction()">YES</button>
+            <script>
+                function myFunction() {
+                    window.location.href = "/helloworld";
+                }
+            </script>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
