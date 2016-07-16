@@ -30,7 +30,7 @@ $(document).ready(function(){
     $('.slick-next').click(function() {
         console.log("click");
         if (edgeFlag) {
-            window.location.href = "../hello";
+            window.location.href = "../condition";
         }
     });
 

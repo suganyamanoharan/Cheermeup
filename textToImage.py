@@ -5,7 +5,7 @@ import random
 def textToImage(astr):
     para = textwrap.wrap(astr, width=23)
     num = random.randint(1,4)
-    im = Image.open("static/Images/Notes/"+str(num)+".jpg")
+    im = Image.open("static/Images//"+str(num)+".jpg")
     MAX_W , MAX_H = im.size
     draw = ImageDraw.Draw(im)
     font = ImageFont.truetype(
@@ -18,4 +18,4 @@ def textToImage(astr):
         current_h += h + pad
 
     name = random.randint(1,1000000)
-    im.save('static/Images/notes_display/' + str(name)+'.png')
+    im.save('static/Images/personal/' + str(name)+'.png')
