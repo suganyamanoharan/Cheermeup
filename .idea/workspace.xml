@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9f5b266-b3ff-4c85-9186-19e2b3e12975" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imageGenerator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/images.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp2.py" afterPath="$PROJECT_DIR$/webapp2.py" />
-    </list>
+    <list default="true" id="f9f5b266-b3ff-4c85-9186-19e2b3e12975" name="Default" comment="" />
     <ignored path="hackathon.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
