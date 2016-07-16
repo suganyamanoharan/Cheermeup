@@ -2,11 +2,6 @@ import os
 from flask import Flask, request, redirect, url_for,render_template,app
 from werkzeug.utils import secure_filename
 
-
-
-
-
-
 ALLOWED_EXTENSIONS = set([ 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
