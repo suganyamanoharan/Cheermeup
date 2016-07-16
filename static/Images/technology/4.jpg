@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="UTF-8">
+<meta name="google-site-verification" content="tbz8pRvfI7jRiJR8spPefljM-dF2Vi3MIxitsQ2oX_Y" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Sorry it's a 404</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css?123">
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+	<link rel="stylesheet" href="/css/download.css?123">
+	<link rel="stylesheet" href="/css/404.css">
+    	<script async="true" src="/js/analytics.js"></script>
+	<script async="true" src="/js/fb.js?v=2"></script>
+    
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<!--[if IE]>
+		<script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->    
+    <script async="true" src="/js/bing.js?v=2"></script>
+    <script async="true" src="/js/vwo.js"></script>
+</head>
+</head>
+
+<body>
+	<!-- Header -->
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<a href="/" class="logo text-hide" title="BlueStacks">BlueStacks</a>
+		</div>
+	</nav>
+    <!-- End Header -->
+    <div class="container">
+        <!-- Banner Download-->
+    <!-- Device Banner -->
+          <div class="appplayerDetails dw-chart">
+              <a href="/download.html" class="DwndApp">Download Bluestacks</a>
+          </div>
+        <div class="device-banner">
+            <h1>Oh no! It's a 404...</h1>
+        </div>
+        <div class="inner-container">
+            <p>Now here's something almost as fun as playing Android games on your computer =)</p>
+        </div>        
+        <div class="device-banner" align="center">
+            <iframe src="//giphy.com/embed/6Fr7FIFGYfl9S?html5=true" width="480" height="429" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+    </div>
+    <!-- End Device Banner -->
+    </div>
+
+ <footer>
+          <div class="container">
+              <ul>
+                <li><a href="/apps.html">apps</a></li>
+                <li><a href="/about-us.html">about</a></li>
+                <li><a href="/enterprise.html">enterprise</a></li>
+                <li><a href="/blog.html">blog</a></li>
+                <li><a href="/advertise.html">advertise</a></li>              
+                <li><a href="http://support.bluestacks.com">support</a></li>
+                <li><a href="/terms-and-privacy.html">terms and privacy</a></li>
+                <li><a href="/">  © 2016 BlueStacks</a></li>
+              </ul>
+                  <ul class="socail-ftr">
+                    <li><a href="https://www.facebook.com/BlueStacksInc" class="facebook"></a></li>
+                    <li><a href="https://twitter.com/bluestacksinc" class="twitter"></a></li>
+                    <li><a href="https://plus.google.com/+bluestacks" class="googleplus"></a></li>
+                  </ul>
+   </footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script>
+	$(function() {
+		$( "#sortable1, #sortable2" ).sortable({
+			connectWith: ".connectedSortable"
+		}).disableSelection();
+
+		$("#sortable1, #sortable2").draggable();
+	});
+	</script>
+</body><script src="/js/campaign_href.js"></script>
+
+</html>
