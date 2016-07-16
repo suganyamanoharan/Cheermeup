@@ -1,0 +1,12 @@
+<!doctype html>
+<title>What makes you happy?</title>
+<form method="post">
+    {% for topic in topics: %}
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name={{topic}} value="edit"> {{topic}}
+        </label>
+    </div>
+    {% endfor %}
+    <button type="submit" name="submit" value="submit">Done</button>
+</form>
