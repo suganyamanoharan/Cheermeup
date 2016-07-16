@@ -84,6 +84,36 @@
 .float-right {
   float: right;
 }
+
+#like-btn {
+  background: url("../like-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain; 
+  border-style:none;
+  color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  height: 80px;
+  padding-bottom: 2px;
+  width: 175px;
+}
+
+#dislike-btn {
+  background: url("../dislike-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain; 
+  border-style:none;
+  color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  height: 80px;
+  padding-bottom: 2px;
+  width: 175px;
+}
+.half {
+  width: 50%;
+  display: inline;
+}
 /*.sun-flower-button {
   position: relative;
   vertical-align: top;
