@@ -1,6 +1,7 @@
 from flask import render_template, request, jsonify
 import logging
 from flask import Flask
+import imageGenerator
 
 
 app= Flask(__name__)
@@ -8,11 +9,10 @@ app= Flask(__name__)
 app.debug = True
 logger = logging.getLogger(__name__)
 
+@app.route('/imgs')
+def hello(imlist=imageGenerator.weighted_choice(selected_tags)):
+    return render_template('images.html', image_list= imlist)
 
-
-@app.route('/home/<name>')
-def hello(name="Default"):
-    return render_template('abcd.html', name=name )
 
 
 
