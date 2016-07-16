@@ -1,0 +1,101 @@
+/*body {
+    background-color: #FFF8A6;
+}*/
+
+.image-container {
+	margin-top: 0px;
+}
+
+.slick-slide img {
+	height: 70%;
+	padding: 50px;
+}
+
+.slick-prev, .slick-next { 
+  position: absolute;
+  display: block; 
+  height: 20px; 
+  width: 20px; 
+  line-height: 0; 
+  font-size: 0; 
+  cursor: pointer; 
+  background: transparent; 
+  color: transparent; 
+  top: 90%; 
+  margin-top: -10px; 
+  padding: 0; 
+  border: none; 
+  outline: none;
+}
+
+.slick-prev { 
+	z-index:1;
+	left: 2px; 
+}
+
+  .slick-next { 
+  right: 20px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: yellow;
+}
+
+#button-container {
+	width: 50%;
+    margin: 0 auto;
+}
+
+.category-btn {
+	margin-top: 50px;
+}
+#interests-btn {
+	float: right;
+}
+.flat-btn {
+	width: 120px;
+	height: 50px;
+	font-size: 18px;
+  color: silver;
+  background: rgba(0,0,0,0);
+  border: solid 2px silver;
+  border-radius: 10px;
+  /*background-color: #6496c8;
+  text-shadow: -1px 1px #417cb8;
+  border: none;
+  box-shadow: 0 5px #27496d;*/
+}
+
+.flat-btn:hover,
+.flat-btn.hover {
+	border: solid 2px #e67e22;
+	color: #e67e22;
+  /*background-color: #e67e22;*/
+  /*text-shadow: -1px 1px #27496d;*/
+}
+
+.flat-btn:active,
+.flat-btn.active {
+	border: solid 2px #e67e22;
+	color: #e67e22;
+  /*background-color: #e67e22;*/
+  /*text-shadow: -1px 1px #193047;*/
+}
+
+/*.sun-flower-button {
+  position: relative;
+  vertical-align: top;
+  width: 100px;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #f1c40f;
+  border: 0;
+  border-bottom: 2px solid #e2b607;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #e2b607;
+  box-shadow: inset 0 -2px #e2b607;
+}*/
