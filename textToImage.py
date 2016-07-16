@@ -4,7 +4,7 @@ import random
 
 def textToImage(astr):
     para = textwrap.wrap(astr, width=23)
-    num = random.randint(1,4)
+    num = random.randint(1,8)
     im = Image.open("static/Images/Notes/"+str(num)+".jpg")
     MAX_W , MAX_H = im.size
     draw = ImageDraw.Draw(im)

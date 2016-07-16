@@ -9,4 +9,3 @@ def pullPersonalPictures():
         out.append("Images/personal/" + el)
 
     return out
-
