@@ -14,5 +14,7 @@ logger = logging.getLogger(__name__)
 def hello(name="Default"):
     return render_template('abcd.html', name=name )
 
-
+@app.route('/')
+def index():
+    return render_template('index.html')
 
