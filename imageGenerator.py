@@ -1,6 +1,6 @@
 import os
 import random
-import numpy.random
+import numpy
 from py_bing_search import PyBingImageSearch
 import urllib
 
@@ -33,4 +33,4 @@ def weighted_choice(dict):
         paths = os.listdir("static/Images/"+ el)
         full_paths = ["Images/"+ el +"/"+ path for path in paths]
         everything += full_paths
-    return [random.choice(everything) for _ in xrange(15)]
+    return [random.choice(everything) for _ in xrange(20 )]
