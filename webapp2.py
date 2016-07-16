@@ -20,6 +20,10 @@ selected = []
 def hello():
     return render_template('hello.html')
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/home/<name>')
 def home(name="Default"):
     return render_template('abcd.html', name=name)
