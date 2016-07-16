@@ -70,7 +70,7 @@ def wmyh():
     if request.method == 'POST':
         if 'done' in request.form.keys():
             # add everything selected to the db
-            return redirect(url_for('hello'))
+            return redirect(url_for('index'))
         elif 'search' in request.form.keys():
             new_topic = request.form.get('search')
             topics.add(new_topic)
