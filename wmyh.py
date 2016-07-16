@@ -1,15 +1,16 @@
 from flask import render_template, request, jsonify
 import logging
 from flask import Flask, redirect, url_for
+from sets import Set
 
 app= Flask(__name__)
 """app = create_app(__name__)"""
 app.debug = True
 logger = logging.getLogger(__name__)
 
-topics = ["food", "landscapes", "tv series", "cats", "dogs", "pokemon", "travel", "technology", "sports",
-              "funny gifs", "music", "hatching chicks", "outer space"]
-selected = []
+topics = Set(["food", "landscapes", "tv-series", "cats", "dogs", "pokemon", "travel", "technology", "sports",
+              "funny-gifs", "music", "hatching-chicks", "outer-space"])
+selected = Set([])
 
 @app.route('/hello', methods=['GET'])
 def hello():
@@ -19,16 +20,17 @@ def hello():
 def wmyh():
     if request.method == 'POST':
         if 'done' in request.form.keys():
-            selected_topics = []
-            for item in request.form.keys():
-                if item != 'done':
-                    ## put in the DB
-                    selected_topics.append(item)
+            print selected
             return redirect(url_for('hello'))
-        else:
+        elif 'search' in request.form.keys():
             new_topic = request.form.get('search')
-            topics.append(new_topic)
-            selected.append(new_topic)
-            return render_template('wmyh.html', topics=topics, selected=selected)
+            topics.add(new_topic)
+            selected.add(new_topic)         # put in the DB
+        else:
+            for item in request.form.keys():
+                if item not in selected:
+                    selected.add(item)      # put in the DB
+                else:
+                    selected.remove(item)
 
-    return render_template('wmyh.html', topics=topics)
+    return render_template('wmyh.html', topics=topics, selected=selected)

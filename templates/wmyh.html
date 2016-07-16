@@ -1,6 +1,10 @@
 <!doctype html>
-<title>What makes you happy?</title>
+<head>
+    <title>What makes you happy?</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/wmyh.css')}}"/>
+</head>
 
+<body>
 <form method="post">
     <input type="text" name="search" placeholder="What makes you happy?">
     <button type="submit" name="add_topic">Add topic!</button>
@@ -8,16 +12,12 @@
 
 <form method="post">
     {% for topic in topics: %}
-    <div class="checkbox">
-        <label>
-            {% if topic in selected: %}
-            <input type="checkbox" name={{topic}} checked> {{topic}}
-            {% else %}
-            <input type="checkbox" name={{topic}}> {{topic}}
-            {% endif %}
-        </label>
-    </div>
+        {% if topic in selected: %}
+        <button type="submit" class="active-btn" name={{topic}}>{{topic}}</button>
+        {% else %}
+        <button type="submit" class="inactive-btn" name={{topic}}>{{topic}}</button>
+        {% endif %}
     {% endfor %}
-
     <button type="submit" name="done">Done!</button>
 </form>
+</body>
