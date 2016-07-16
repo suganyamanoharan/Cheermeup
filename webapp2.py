@@ -75,7 +75,16 @@ selected = Set([])
 def hello():
     return render_template('hello.html')
 
-@app.route('/')
+@app.route('/personal')
+def personal():
+    plist = personalImages.pullPersonalPictures()
+    return render_template('index.html', image_list=plist)
+
+@app.route('/interests')
+def interests():
+    imlist=imageGenerator.weighted_choice(getTags())
+    return render_template('index.html', image_list=imlist)
+
 @app.route('/')
 def index():
     plist = personalImages.pullPersonalPictures()
