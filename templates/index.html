@@ -14,13 +14,11 @@
     <button type="button" id="interests-btn" class="category-btn flat-btn">Interests</button>
   </div>
   <div class="image-container">
-    {% for imgurl in imlist %}
-    <div class="slide-img"><img src="{{url_for('static', filename=imgurl)}}"/></div>
-<!--     <div class="slide-img"><img src="{{url_for('static', filename=imgurl)}}"/></div>
-    <div class="slide-img"><img src="{{url_for('static', filename=i)}}"/></div>
-    <div class="slide-img"><img src="{{url_for('static', filename='bunny.jpg')}}"/></div> -->
-    {% endfor %}
-  </div>
+ {% for item in image_list %}
+	<div class="slide-img"><img src="{{url_for('static', filename=item)}}"/></div> 
+
+   {% endfor %}  
+</div>
 
   <div id="like-btns-container" class="button-container">
     <form action="action_page.php">
