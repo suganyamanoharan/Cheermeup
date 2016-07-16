@@ -8,9 +8,10 @@
 
 .slick-slide img {
 	height: 70%;
-	padding: 50px;
+	padding: 20px;
 }
 
+/* arrows */
 .slick-prev, .slick-next { 
   position: absolute;
   display: block; 
@@ -21,7 +22,7 @@
   cursor: pointer; 
   background: transparent; 
   color: transparent; 
-  top: 90%; 
+  top: 80%; 
   margin-top: -10px; 
   padding: 0; 
   border: none; 
@@ -47,7 +48,7 @@
 }
 
 .category-btn {
-	margin-top: 50px;
+	margin-top: 20px;
 }
 #interests-btn {
 	float: right;
@@ -85,8 +86,15 @@
   float: right;
 }
 
+#like-btns-container {
+  margin: 0 auto;
+  margin-top: -180px;
+  width: 40%;
+
+}
+
 #like-btn {
-  background: url("../like-icon.png");
+  background: url("../smiley.jpg");
   background-repeat: no-repeat;
   background-size: contain; 
   border-style:none;
@@ -96,10 +104,12 @@
   height: 80px;
   padding-bottom: 2px;
   width: 175px;
+  position: relative;
+  /*z-index:1;*/
 }
 
 #dislike-btn {
-  background: url("../dislike-icon.png");
+  background: url("../unsmiley.jpg");
   background-repeat: no-repeat;
   background-size: contain; 
   border-style:none;
@@ -109,6 +119,8 @@
   height: 80px;
   padding-bottom: 2px;
   width: 175px;
+  position: relative;
+  /*z-index:1;*/
 }
 .half {
   width: 50%;
