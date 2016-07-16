@@ -2,8 +2,6 @@ from flask import render_template, request, jsonify
 import logging
 import flask
 
-
-
 app = create_app(__name__)
 app.debug = True
 logger = logging.getLogger(__name__)
