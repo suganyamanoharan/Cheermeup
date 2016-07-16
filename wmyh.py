@@ -22,9 +22,9 @@ def wmyh():
             selected_topics = []
             for item in request.form.keys():
                 if item != 'done':
-                    ## put in the DB
+                    print "PUT PUT PUT"+str(item)
                     selected_topics.append(item)
-            return redirect(url_for('hello'))
+            return redirect(url_for('/'))
         else:
             new_topic = request.form.get('search')
             topics.append(new_topic)
