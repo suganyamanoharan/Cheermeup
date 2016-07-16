@@ -18,4 +18,4 @@ def textToImage(astr):
         current_h += h + pad
 
     name = random.randint(1,1000000)
-    im.save('static/Images/notes_display/' + str(name)+'.png')
+    im.save('static/Images/personal/' + str(name)+'.png')

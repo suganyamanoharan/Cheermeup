@@ -29,6 +29,28 @@ def teardown_request(exception):
     if hasattr(g, 'db'):
         g.db.close()
 
+def deleteTags():
+     	print ("DELETED TAGS")
+  	g.db.execute('DELETE FROM tags')
+  	g.db.commit()
+  
+def insertTags(item):
+      	print ( "INSERT INTO TAGS ('tagname') VALUES ("+str(item)+")")
+  	g.db.execute('INSERT INTO TAGS (tagname) VALUES (?)',[item])
+  	g.db.commit()
+
+def updateIncrementTags(item):
+         print ( "UPDATE tags SET feedback = feedback + 1 WHERE tagname="+str(item))
+         g.db.execute('UPDATE tags SET feedback = feedback + 1 WHERE tagname=?',[item])
+         g.db.commit()
+ 
+def updateDecrementTags(item):
+         print ( "UPDATE tags SET feedback = feedback - 1 WHERE tagname="+str(item))
+         g.db.execute('UPDATE tags SET feedback = feedback - 1 WHERE tagname=?',[item])
+         g.db.commit()
+ 
+
+
 '''REDUNDANT - handled down in /'''
 @app.route('/imgs')
 def generatePaths(imlist=imageGenerator.weighted_choice({"dogs":10,"cats":10})):
@@ -60,27 +82,38 @@ def handleLikesAndDislikes():
     tag = request.json['tag']
     value = request.json['value']
     if value == 'dislike':
-        pass #-1
-    elif value == 'dislike':
-        pass #increment count
+         updateDecrementTags(tag)
+    elif value == 'like':
+         updateIncrementTags(tag)
     return json.dumps({'status':'OK'})
+
 
 @app.route('/wmyh', methods=['GET', 'POST'])        # what makes you happy?
 def wmyh():
     if request.method == 'POST':
         if 'done' in request.form.keys():
-            # add everything selected to the db
-            return redirect(url_for('index'))
+            deleteTags()
+ 	    for item in selected:
+ 		insertTags(item)
+            return redirect(url_for('index'))           # potentially a different url
         elif 'search' in request.form.keys():
             new_topic = request.form.get('search')
             topics.add(new_topic)
-            selected.add(new_topic)
+            selected.add(new_topic)         # put in the DB
         else:
             for item in request.form.keys():
                 if item not in selected:
-                    selected.add(item)
+                    selected.add(item)      # put in the DB
                 else:
                     selected.remove(item)
-
     nothingSelected = len(selected) == 0
     return render_template('wmyh.html', topics=topics, selected=selected, nothingSelected =nothingSelected)
+
+
+@app.route('/condition')
+def condition():
+    return render_template('condition.html')
+
+@app.route('/helloworld')
+def thanks():
+    return render_template('thankyou.html')
