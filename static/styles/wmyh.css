@@ -51,14 +51,14 @@
 }
 
 .search-bar {
-    width: 300px;
+    width: 85%;
     height: 30px;
 }
 
 p {
-    font: 30px BlinkMacSystemFont;
+    font: 35px BlinkMacSystemFont;
     display: inline-block;
-    padding: 0px 5px 30px 0px;
+    padding: 0px 5px 10px 0px;
 }
 
 .choices {
@@ -73,7 +73,7 @@ p {
 .done-btn {
     display: inline-block;
     padding: 6px 12px;
-    margin-bottom: 0;
+    margin-left: 263px;
     font-size: 20px;
     font-weight: normal;
     line-height: 1.428571429;
@@ -96,7 +96,12 @@ p {
 }
 
 body {
-    background-image: url("../images5.jpg");
+    background-image: url("../flowers.gif");
     background-repeat: no-repeat;
     background-size: 1300px, 1050px;
+}
+
+.overall {
+    margin-right: 270px;
+    margin-left: 325px;
 }
