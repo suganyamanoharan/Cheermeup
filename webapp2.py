@@ -8,6 +8,7 @@ import sqlite3
 from sets import Set
 import json
 from werkzeug.utils import secure_filename
+import personalImages
 
 ALLOWED_EXTENSIONS = set([ 'jpg', 'jpeg', 'gif'])
 
@@ -75,10 +76,13 @@ def hello():
     return render_template('hello.html')
 
 @app.route('/')
+@app.route('/')
 def index():
+    plist = personalImages.pullPersonalPictures()
     imlist=imageGenerator.weighted_choice(getTags())
     print("List" + str(imlist))
-    return render_template('index.html',image_list=imlist)
+    return render_template('index.html',image_list=imlist, plist = plist)
+
 
 def getTags():
     tags = g.db.execute("SELECT tagname,feedback FROM tags").fetchall()
