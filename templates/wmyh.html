@@ -12,7 +12,7 @@
         <p>Tell us what makes you happy</p>
         {% else %}
         <p>Great choices!</p>
-        <button type="submit" name="done" class="done-btn">Done?</button>
+        <button type="submit" name="done" class="done-btn" value="first">Done?</button>
         {% endif %}
     </div>
 
@@ -31,5 +31,17 @@
         {% endif %}
     {% endfor %}
 </form>
+<br/>
+<br/>
+<br/>
+<br/>
+<button class = "done-btn" type="button" onclick="location.href='/uploadimages'">Upload Images</button>
+<br/>
+<br/>
+<br/>
+<button class = "done-btn" type="button" onclick="location.href='/uploadnotes'">Upload Notes</button>
 </div>
+
+
+
 </body>

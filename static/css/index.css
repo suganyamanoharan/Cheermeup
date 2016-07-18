@@ -1,14 +1,14 @@
-/*body {
-    background-color: #FFF8A6;
-}*/
+body {
+    background-image:url("../bg.jpg");
+}
 
 .image-container {
-	margin-top: 0px;
+   margin-top: 0px;
 }
 
 .slick-slide img {
-	height: 70%;
-	padding: 20px;
+   height: 70%;
+   padding: 20px;
 }
 
 /* arrows */
@@ -30,8 +30,8 @@
 }
 
 .slick-prev { 
-	z-index:1;
-	left: 2px; 
+   z-index:1;
+   left: 2px; 
 }
 
 .slick-next { 
@@ -43,45 +43,38 @@
 }
 
 .button-container {
-	width: 50%;
+   width: 100%;
     margin: 0 auto;
+    display: inline-block;
 }
 
 .category-btn {
-	margin-top: 20px;
+   margin-top: 20px;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: #ADD8E6;
+    background-color: #ffffff;
+    border-color: #ADD8E6;
 }
+
+.category-btn:hover {
+    color: #ffffff;
+    background-color: #ADD8E6;
+    border-color: #ADD8E6;
+}
+
 #interests-btn {
-	float: right;
-}
-.flat-btn {
-	width: 120px;
-	height: 50px;
-	font-size: 18px;
-  color: silver;
-  background: rgba(0,0,0,0);
-  border: solid 2px silver;
-  border-radius: 10px;
-  /*background-color: #6496c8;
-  text-shadow: -1px 1px #417cb8;
-  border: none;
-  box-shadow: 0 5px #27496d;*/
+   float: right;
 }
 
-.flat-btn:hover,
-.flat-btn.hover {
-	border: solid 2px #e67e22;
-	color: #e67e22;
-  /*background-color: #e67e22;*/
-  /*text-shadow: -1px 1px #27496d;*/
-}
-
-.flat-btn:active,
-.flat-btn.active {
-	border: solid 2px #e67e22;
-	color: #e67e22;
-  /*background-color: #e67e22;*/
-  /*text-shadow: -1px 1px #193047;*/
-}
 .float-right {
   float: right;
 }
@@ -94,7 +87,7 @@
 }
 
 #like-btn {
-  background: url("../smiley.jpg");
+  background: url("../smiley.png");
   background-repeat: no-repeat;
   background-size: contain; 
   border-style:none;
@@ -109,7 +102,7 @@
 }
 
 #dislike-btn {
-  background: url("../unsmiley.jpg");
+  background: url("../unsmiley.png");
   background-repeat: no-repeat;
   background-size: contain; 
   border-style:none;
@@ -126,20 +119,3 @@
   width: 50%;
   display: inline;
 }
-/*.sun-flower-button {
-  position: relative;
-  vertical-align: top;
-  width: 100px;
-  height: 60px;
-  padding: 0;
-  font-size: 22px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  background: #f1c40f;
-  border: 0;
-  border-bottom: 2px solid #e2b607;
-  cursor: pointer;
-  -webkit-box-shadow: inset 0 -2px #e2b607;
-  box-shadow: inset 0 -2px #e2b607;
-}*/
