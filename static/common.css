@@ -1,0 +1,54 @@
+body {
+    background-image: url("images5.jpg");
+    background-repeat: no-repeat;
+    background-size: 1300px, 1050px;
+}
+
+#common {
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.active-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #FFC0CB;
+    border-color: #FFC0CB;
+}
+
+.active-btn:hover {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+#text {
+    font-size: 50px;
+    color:#60AFFE;
+    margin-left:90px ;
+    font-family:BlinkMacSystemFont;
+}
+
+.topic_checkbox {
+    margin-left: 200px;
+}
+
+#word {
+    margin-top: 250px;
+    margin-bottom: 250px;
+    font-size: 50px;
+    color:#60AFFE;
+    margin-left:90px ;
+    font-family:BlinkMacSystemFont;
+}

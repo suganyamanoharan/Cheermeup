@@ -114,7 +114,8 @@ def handleLikesAndDislikes():
 def wmyh():
     if request.method == 'POST':
         if 'done' in request.form.keys():
-            deleteTags()
+        #if request.form["done"]==
+	    deleteTags()
  	    for item in selected:
  		insertTags(item)
             return redirect(url_for('index'))           # potentially a different url
@@ -165,6 +166,12 @@ def upload_file():
                                     filename=filename))
     return render_template('upload.html')
 
+@app.route('/uploadnotes', methods=['GET', 'POST'])
+def upload_notes():
+	if request.method == 'POST':
+		stringlit=request.form["textb"]
+		uploadImage(stringlit)
+	return render_template('uploadnotes.html')
 
 def uploadImage(textString):
 	print ( "Text to image done for " + textString)

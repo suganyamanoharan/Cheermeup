@@ -105,3 +105,20 @@ body {
     margin-right: 270px;
     margin-left: 325px;
 }
+
+.link-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-left: 263px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: #ADD8E6;
+    background-color: #ffff00;
